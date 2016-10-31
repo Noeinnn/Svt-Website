@@ -1,0 +1,598 @@
+@charset "utf-8";
+/* CSS Document */
+/* Jason Nguyen u3117696 */
+
+
+
+/* Table of Contents:
+	1. Reset CSS
+	2. Base Styles
+	3. Navigation
+	4. Header
+	5. Introduction Section
+	6. Portfolio Section 
+	7. Awesome Team Section
+    8. Contact Section
+    9. Footer
+*/
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Hind+Guntur|Montserrat:400+700|Patua+One|Ubuntu';
+/* Fonts retrieved from https://fonts.google.com */
+
+/* 
+font-family: 'Ubuntu', sans-serif;     Paragraphs
+font-family: 'Hind Guntur', sans-serif;     Subtitle
+font-family: 'Montserrat', sans-serif;      Title
+font-family: 'Patua One', cursive;       Main Title
+*/
+
+
+
+/* 1.RESET CSS ---------------------------------------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/* 2.BASE STYLES ---------------------------------------- */
+
+p {
+    font-family: 'Ubuntu', sans-serif; 
+    color: #28283e;
+}
+
+a {
+    color: #ffe83b;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+    a:hover {
+        color: #ff9300;
+        transition: 0.3s;
+    }
+
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+
+h2 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 0.75px;
+}
+
+h3 {
+    font-family: 'Hind Guntur', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    width: 1040px;
+    margin: 0 auto;
+    background: repeating-linear-gradient( /* Creating the striped background */
+      45deg,
+      #fffcef,
+      #fffcef 1px,
+      #f0f0f0 1px,
+      #f0f0f0 10px
+    );
+}
+
+
+#main {
+    background-color: white;
+}
+
+
+h1.logo {
+    width: 250px;
+    height: 200px;
+    margin: auto;
+    padding: 0;
+}
+
+    h1.logo a { /* Creating the logo by moving the sample text away using text-indent, font-size and color. Then using the space leftover to apply the logo through using background: */
+         display: block;
+         width: 250px;
+         height: 200px;
+         text-indent: -9999px;
+         font-size: 0;
+         color: #fff;
+         background: url(http://i.imgur.com/i8lrNIn.png) no-repeat center;
+         background-size: contain;
+    }
+
+
+
+
+
+/* 3.NAVIGATION ---------------------------------------- */
+
+nav {
+    background-image: url(http://i.imgur.com/3It52HB.jpg); /* Background image retrieved from https://www.pexels.com/photo/man-on-ocean-132955/ */
+    background-position: 50% 90%;
+    background-size:auto;
+    padding: 40px 30px 100px 30px; 
+    text-align: center;
+}
+
+    nav a {
+        font-family: 'Hind Guntur', sans-serif; 
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+
+        .nav li {
+            display:inline-block;
+            margin: 20px 80px 0 0;
+        }
+
+
+
+.section-title {
+    text-align: center;
+}
+
+    .section-title p {
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif; 
+      /*  margin-top: -40px;*/
+    }
+
+        .section-title h1 {
+            font-size: 35px;
+            color: #ffffff;
+        }
+
+
+#home .section-title h1 { /* Moving the 'Home' text to sit on the nav background by using a negative margin */
+    margin: -60px 60px; 
+    color: #ffffff;
+    font-size: 28px;
+    float: right;
+}
+
+
+
+/* 4.HEADER ---------------------------------------- */
+
+.hero-unit {
+    margin: 40px 0 40px 90px;
+    float: left;
+    width: 465px;
+    height: 200px;
+    padding: 40px;
+    background: #173e43;    
+}
+
+
+    .hero-unit h1 { /* Creating the overlapping effect by giving the h1 padding and a transparent background, then moving it to stack on top of the text background using negative margins.*/
+        color: #ffffff;  
+        font-size: 35px;
+        width: 235px;
+        margin: -90px 0 20px -90px; /* Using negative margins in order for the orange transparent block to overlap the dark green block */
+        padding: 65px 0px 10px 65px;
+        background: rgba(242, 168, 0, 0.9);  /* Used an rgba colour in order to get a transparent background, while not affecting the opacity of the text */
+        
+    }
+
+.header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+
+    .header p:first-of-type {
+        color: white;
+        font-size: 18px;
+        margin: 0 0 60px 0;
+        font-family: 'Montserrat', sans-serif; 
+    }
+
+        .header p:nth-of-type(2) { /* Targetting the 'View Our Work' link */
+            float: right;
+        }
+
+
+
+.arrow-down { /* Replacing the 'arrow down' text with an image through combination of text-indent, text-color and font-size. */
+    background: url(http://i.imgur.com/ie6xRC0.png) no-repeat;
+    background-size: contain;  
+    text-indent: -9000px;
+    text-color: white;
+    padding: 20px;
+    font-size: 0;    
+}
+
+    .arrow-down:hover {
+        background-color: #ff9300;
+    }
+
+
+
+
+/* 5.INTRODUCTION ---------------------------------------- */
+
+#introduction h1 {
+    background: rgba(242, 168, 0, 0.9);  
+    padding: 65px 45px 5px 5px;
+    width: 250px;
+    margin: -30px 0px -0px 0px; 
+    float: right;
+
+}
+
+    #introduction h1 + p { /* Targeting the <p> that directly follows a h1 within the introduction id */
+        color: white;
+        padding: 70px 60px 60px 60px;
+        text-align: left;
+        background: #173e43;
+        margin: 25px 50px 0px 25px;
+    }
+
+        #introduction h2 {
+            margin-left: 5px;
+            color: #ffffff;
+        }
+
+            #introduction .section-title {
+                width: 450px;
+                float: right;
+            }
+
+
+.services li {
+    width: 370px;
+    padding: 20px;
+    display: inline-block;
+    background: #3fb0ac;
+    margin: -30px 0 60px 150px;
+
+}
+
+    .services p {
+        margin: auto;
+        color: white;
+        padding: 5px;
+    }
+
+
+.icon-tpl-design, .icon-tpl-spaceship, .icon-tpl-galaxy { /* Adding a image to each Introduction content piece */
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+    width: 80px; /* Width of new image */
+    height: 90px; /* Height of new image */
+    padding-left: 10px; /* Equal to width of new image */
+    float: left;
+    margin: 15px 20px 10px 5px;
+    background-size:contain;
+}
+
+    .icon-tpl-design {
+        background-image: url(http://i.imgur.com/xbSetFK.png);
+    }
+
+    .icon-tpl-spaceship {
+        background: url(http://i.imgur.com/I8ZFGpM.png) no-repeat;
+        background-size:contain;
+    }
+
+    .icon-tpl-galaxy {
+        background: url(http://i.imgur.com/xqM3yFM.png) no-repeat;
+        background-size:contain;
+    }
+
+
+
+/* 6.PORTFOLIO ---------------------------------------- */
+
+#portfolio {
+    padding: 60px;
+    margin: 0 auto;
+}
+
+    #portfolio .section-title {
+        width: 575px;
+        margin: 0 0 0 70px;
+    }
+
+        #portfolio h1 {
+            background: rgba(242, 168, 0, 0.9);
+            padding: 65px 15px 5px 65px;
+            width: 250px;
+            float: left;
+            margin: -55px 0px 0px -55px;
+        }
+
+            #portfolio h1 + p {
+                color: #ffffff;
+                background: #173e43;
+                padding: 70px 60px 60px 60px;
+                text-align: left;
+                margin: 0 0 50px 0;
+            }
+
+                #portfolio li{
+                    display: inline-block;
+                    margin: 0 auto;
+                    padding: 30px;
+                }
+
+                    #portfolio .caption a{
+                        color: #ff9300;
+                        font-size: 18px;
+                        font-family: 'Montserrat', sans-serif; 
+                    }
+
+                        #portfolio .caption a:hover {
+                            color: #3fb0ac;
+                            transition: 0.3s;
+                        }
+
+
+
+/* Applying all the base styling in order to replace each individual picture */
+.portfolio ul.thumbnails li:nth-of-type(1) img,
+.portfolio ul.thumbnails li:nth-of-type(2) img,
+.portfolio ul.thumbnails li:nth-of-type(3) img,
+.portfolio ul.thumbnails li:nth-of-type(4) img,
+.portfolio ul.thumbnails li:nth-of-type(5) img,
+.portfolio ul.thumbnails li:nth-of-type(6) img,
+.portfolio ul.thumbnails li:nth-of-type(7) img,
+.portfolio ul.thumbnails li:nth-of-type(8) img {    
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+    width: 180px; /* Width of new image */
+    height: 180px; /* Height of new image */
+    padding-left: 240px; /* Equal to width of new image */
+    float: left; 
+    margin: 0 0 10px 0;
+ }
+
+/* Adding a different picture to each <li> element */
+    .portfolio ul.thumbnails li:nth-of-type(1) img {
+        background: url(http://i.imgur.com/7YRdJ9o.jpg) no-repeat bottom;
+    }
+
+    .portfolio ul.thumbnails li:nth-of-type(2) img {
+        background: url(http://i.imgur.com/udX1x0d.jpg) no-repeat center;
+    }
+
+    .portfolio ul.thumbnails li:nth-of-type(3) img {
+        background: url(http://i.imgur.com/Dh8aQC8.jpg) no-repeat center;
+    }
+
+    .portfolio ul.thumbnails li:nth-of-type(4) img {
+        background: url(http://i.imgur.com/DeIVJtH.jpg) no-repeat right;
+    }
+
+    .portfolio ul.thumbnails li:nth-of-type(5) img {
+        background: url(http://i.imgur.com/5Tw9gZO.jpg) no-repeat center;
+    }
+
+    .portfolio ul.thumbnails li:nth-of-type(6) img {
+        background: url(http://i.imgur.com/f6x2Mie.jpg) no-repeat center;
+    }
+
+    .portfolio ul.thumbnails li:nth-of-type(7) img {
+        background: url(http://i.imgur.com/g0ck7z7.jpg) no-repeat;
+    }
+
+    .portfolio ul.thumbnails li:nth-of-type(8) img {
+        background: url(http://i.imgur.com/Giq80tD.jpg) no-repeat center;
+    }
+
+
+/* Adding a opacity change when hovering over each Portfolio thumbnail */
+.portfolio ul.thumbnails li:nth-of-type(1) img:hover,
+.portfolio ul.thumbnails li:nth-of-type(2) img:hover,
+.portfolio ul.thumbnails li:nth-of-type(3) img:hover,
+.portfolio ul.thumbnails li:nth-of-type(4) img:hover,
+.portfolio ul.thumbnails li:nth-of-type(5) img:hover,
+.portfolio ul.thumbnails li:nth-of-type(6) img:hover,
+.portfolio ul.thumbnails li:nth-of-type(7) img:hover,
+.portfolio ul.thumbnails li:nth-of-type(8) img:hover {
+    opacity: 0.5;
+}
+
+
+
+/* 7.AWESOME TEAM ---------------------------------------- */
+
+#team {
+    margin-top: 175px;
+}
+
+    #team .section-title {
+        width: 475px;
+        margin-left: 55px;
+    }
+
+        #team h1 {
+            background: rgba(242, 168, 0, 0.9);
+            padding: 65px 15px 5px 65px;
+            width: 300px;
+            margin: -50px 0px 0px -55px;
+            float: left;
+        }
+
+            #team h1 + p {
+                color: #ffffff;
+                text-align: left;
+                padding: 75px 60px 60px 60px;
+                background: #173e43;
+                margin: -100px 0 50px 0;
+            }
+
+            .team li {
+                display: inline-block;
+                width: 240px;
+                float: right;
+                padding: 25px 45px;
+                margin-top: -25px;
+                margin-left: -30px;
+            }
+
+                .team li:nth-of-type(3),
+                .team li:nth-of-type(4) { /* Targetting the 3rd and 4th <li> elements of the class 'team' */
+                    margin-top: -40px;
+                }
+
+
+.section-description {
+    width: 325px;
+    float: left;
+    padding: 40px;
+    background: #3fb0ac;
+    height: 350px;
+    color: #ffffff;
+}
+
+
+.section-content-title {
+    color: #ff9300;
+    font-weight: 700;
+}
+
+    .section-content-title a {
+        color: #3fb0ac;
+    }
+
+        .section-content-title a:hover {
+            color: #ff9300;
+        }
+
+
+
+
+
+/* 8.CONTACT ---------------------------------------- */
+
+#contact {
+    padding: 30px 0 0 0;
+    display: inline-block;
+    background: #3fb0ac;
+}
+
+    #contact h1 + p {
+        color: #ffffff;
+    }
+
+        #contact .section-content p {
+            width: 600px;
+            color: #ffffff;
+            margin: auto;
+            padding: 25px;
+        }
+
+
+.details {
+    width: 200px;
+    padding: 25px 25px 30px 25px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: 'Hind Guntur', sans-serif;   
+    color: white;
+}
+
+
+/* 9.FOOTER ---------------------------------------- */
+
+
+footer {
+    background: #173e43;
+    margin: auto;
+    height: 250px;
+    width: 1040px;
+}
+
+    .footer-content {
+        width: 350px;
+        margin: auto;
+        color: white;
+        font-family: 'Hind Guntur', sans-serif;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+.social {
+    font-family: 'Hind Guntur', sans-serif;
+    list-style-type: none;
+    font-variant: small-caps;
+    font-size: 20px;
+    width: 200px;
+    margin-left: 60px;
+}
+
+a.scroll-top { /* Replacing the 'top' text with an image using text-indent, text-color and font-size. */
+    margin: 50%;
+    background-color: #3fb0ac;
+    background-image: url(http://i.imgur.com/xDPHvka.png);
+    background-size: contain;   
+    text-indent: -9000px;
+    text-color: white;
+    padding: 20px;
+    font-size: 0;
+}
+
+    a.scroll-top:hover {
+        background-color: #ff9300;
+    }
+
